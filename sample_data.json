@@ -1,0 +1,460 @@
+{
+    "meta": {
+        "code": 200,
+        "requestId": "5ac0063e351e3d4df998c970"
+    },
+    "response": {
+        "suggestedRadius": 30000,
+        "headerLocation": "Current map view",
+        "headerFullLocation": "Current map view",
+        "headerLocationGranularity": "unknown",
+        "query": "outdoors",
+        "totalResults": 7,
+        "suggestedBounds": {
+            "ne": {
+                "lat": 34.214871638488255,
+                "lng": 118.34544753841958
+            },
+            "sw": {
+                "lat": 33.76057487822818,
+                "lng": 118.22722405475925
+            }
+        },
+        "groups": [{
+            "type": "Recommended Places",
+            "name": "recommended",
+            "items": [{
+                "reasons": {
+                    "count": 0,
+                    "items": [{
+                        "summary": "This spot is popular",
+                        "type": "general",
+                        "reasonName": "globalInteractionReason"
+                    }]
+                },
+                "venue": {
+                    "id": "50177845e4b0daed369c4bee",
+                    "name": "宿迁市游泳馆（极速轮滑定点游泳中心）",
+                    "contact": {
+                        "phone": "+8615996781521",
+                        "formattedPhone": "+86 159 9678 1521",
+                        "twitter": "?jay2chou"
+                    },
+                    "location": {
+                        "address": "宿迁市体育馆",
+                        "crossStreet": "宿城区世纪大道与微山湖路交叉",
+                        "lat": 33.95452545881997,
+                        "lng": 118.25808989268002,
+                        "labeledLatLngs": [{
+                            "label": "display",
+                            "lat": 33.95452545881997,
+                            "lng": 118.25808989268002
+                        }],
+                        "distance": 20841,
+                        "postalCode": "223800",
+                        "cc": "CN",
+                        "city": "Suqian",
+                        "state": "Jiangsu Sheng",
+                        "country": "China",
+                        "formattedAddress": ["宿迁市体育馆 (宿城区世纪大道与微山湖路交叉)", "Suqian", "Jiangsu Sheng, 223800", "China"]
+                    },
+                    "categories": [{
+                        "id": "4bf58dd8d48988d1e1941735",
+                        "name": "Basketball Court",
+                        "pluralName": "Basketball Courts",
+                        "shortName": "Basketball Court",
+                        "icon": {
+                            "prefix": "https:\/\/ss3.4sqi.net\/img\/categories_v2\/parks_outdoors\/basketballcourt_",
+                            "suffix": ".png"
+                        },
+                        "primary": true
+                    }],
+                    "verified": false,
+                    "stats": {
+                        "tipCount": 0,
+                        "usersCount": 2,
+                        "checkinsCount": 10
+                    },
+                    "beenHere": {
+                        "count": 0,
+                        "marked": false,
+                        "lastCheckinExpiredAt": 0
+                    },
+                    "photos": {
+                        "count": 0,
+                        "groups": []
+                    },
+                    "hereNow": {
+                        "count": 0,
+                        "summary": "Nobody here",
+                        "groups": []
+                    }
+                },
+                "referralId": "e-8-50177845e4b0daed369c4bee-0"
+            }, {
+                "reasons": {
+                    "count": 0,
+                    "items": [{
+                        "summary": "This spot is popular",
+                        "type": "general",
+                        "reasonName": "globalInteractionReason"
+                    }]
+                },
+                "venue": {
+                    "id": "4d4790f411618cfa1da5ca23",
+                    "name": "宿城区政府广场",
+                    "contact": {},
+                    "location": {
+                        "lat": 33.96141509048428,
+                        "lng": 118.23259784947108,
+                        "labeledLatLngs": [{
+                            "label": "display",
+                            "lat": 33.96141509048428,
+                            "lng": 118.23259784947108
+                        }],
+                        "distance": 22417,
+                        "postalCode": "223814",
+                        "cc": "CN",
+                        "city": "Suqian",
+                        "state": "Jiangsu Sheng",
+                        "country": "China",
+                        "formattedAddress": ["Suqian", "Jiangsu Sheng, 223814", "China"]
+                    },
+                    "categories": [{
+                        "id": "4bf58dd8d48988d1e4941735",
+                        "name": "Campground",
+                        "pluralName": "Campgrounds",
+                        "shortName": "Campground",
+                        "icon": {
+                            "prefix": "https:\/\/ss3.4sqi.net\/img\/categories_v2\/parks_outdoors\/campground_",
+                            "suffix": ".png"
+                        },
+                        "primary": true
+                    }],
+                    "verified": false,
+                    "stats": {
+                        "tipCount": 0,
+                        "usersCount": 6,
+                        "checkinsCount": 11
+                    },
+                    "beenHere": {
+                        "count": 0,
+                        "marked": false,
+                        "lastCheckinExpiredAt": 0
+                    },
+                    "photos": {
+                        "count": 0,
+                        "groups": []
+                    },
+                    "hereNow": {
+                        "count": 0,
+                        "summary": "Nobody here",
+                        "groups": []
+                    }
+                },
+                "referralId": "e-8-4d4790f411618cfa1da5ca23-1"
+            }, {
+                "reasons": {
+                    "count": 0,
+                    "items": [{
+                        "summary": "This spot is popular",
+                        "type": "general",
+                        "reasonName": "globalInteractionReason"
+                    }]
+                },
+                "venue": {
+                    "id": "514d043ee4b0f713a6a69df2",
+                    "name": "运河湾自然农园",
+                    "contact": {},
+                    "location": {
+                        "lat": 33.972808837890625,
+                        "lng": 118.32099151611328,
+                        "labeledLatLngs": [{
+                            "label": "display",
+                            "lat": 33.972808837890625,
+                            "lng": 118.32099151611328
+                        }],
+                        "distance": 15006,
+                        "cc": "CN",
+                        "country": "China",
+                        "formattedAddress": ["China"]
+                    },
+                    "categories": [{
+                        "id": "4bf58dd8d48988d15b941735",
+                        "name": "Farm",
+                        "pluralName": "Farms",
+                        "shortName": "Farm",
+                        "icon": {
+                            "prefix": "https:\/\/ss3.4sqi.net\/img\/categories_v2\/parks_outdoors\/farm_",
+                            "suffix": ".png"
+                        },
+                        "primary": true
+                    }],
+                    "verified": false,
+                    "stats": {
+                        "tipCount": 0,
+                        "usersCount": 6,
+                        "checkinsCount": 7
+                    },
+                    "beenHere": {
+                        "count": 0,
+                        "marked": false,
+                        "lastCheckinExpiredAt": 0
+                    },
+                    "photos": {
+                        "count": 0,
+                        "groups": []
+                    },
+                    "hereNow": {
+                        "count": 0,
+                        "summary": "Nobody here",
+                        "groups": []
+                    }
+                },
+                "referralId": "e-8-514d043ee4b0f713a6a69df2-2"
+            }, {
+                "reasons": {
+                    "count": 0,
+                    "items": [{
+                        "summary": "This spot is popular",
+                        "type": "general",
+                        "reasonName": "globalInteractionReason"
+                    }]
+                },
+                "venue": {
+                    "id": "5700f8aa498e52f6e6d3c8ba",
+                    "name": "洋河",
+                    "contact": {},
+                    "location": {
+                        "lat": 33.78122473096727,
+                        "lng": 118.33813321479775,
+                        "labeledLatLngs": [{
+                            "label": "display",
+                            "lat": 33.78122473096727,
+                            "lng": 118.33813321479775
+                        }],
+                        "distance": 32694,
+                        "cc": "CN",
+                        "country": "China",
+                        "formattedAddress": ["China"]
+                    },
+                    "categories": [{
+                        "id": "52e81612bcbc57f1066b7a30",
+                        "name": "Nudist Beach",
+                        "pluralName": "Nudist Beaches",
+                        "shortName": "Nudist Beach",
+                        "icon": {
+                            "prefix": "https:\/\/ss3.4sqi.net\/img\/categories_v2\/parks_outdoors\/beach_",
+                            "suffix": ".png"
+                        },
+                        "primary": true
+                    }],
+                    "verified": false,
+                    "stats": {
+                        "tipCount": 0,
+                        "usersCount": 4,
+                        "checkinsCount": 5
+                    },
+                    "beenHere": {
+                        "count": 0,
+                        "marked": false,
+                        "lastCheckinExpiredAt": 0
+                    },
+                    "photos": {
+                        "count": 0,
+                        "groups": []
+                    },
+                    "hereNow": {
+                        "count": 0,
+                        "summary": "Nobody here",
+                        "groups": []
+                    }
+                },
+                "flags": {
+                    "outsideRadius": true
+                },
+                "referralId": "e-8-5700f8aa498e52f6e6d3c8ba-3"
+            }, {
+                "reasons": {
+                    "count": 0,
+                    "items": [{
+                        "summary": "This spot is popular",
+                        "type": "general",
+                        "reasonName": "globalInteractionReason"
+                    }]
+                },
+                "venue": {
+                    "id": "508d11a9e4b019412cf74222",
+                    "name": "宿豫区羽毛球馆",
+                    "contact": {},
+                    "location": {
+                        "lat": 33.949198,
+                        "lng": 118.308151,
+                        "labeledLatLngs": [{
+                            "label": "display",
+                            "lat": 33.949198,
+                            "lng": 118.308151
+                        }],
+                        "distance": 17671,
+                        "cc": "CN",
+                        "country": "China",
+                        "formattedAddress": ["China"]
+                    },
+                    "categories": [{
+                        "id": "4f4528bc4b90abdf24c9de85",
+                        "name": "Athletics & Sports",
+                        "pluralName": "Athletics & Sports",
+                        "shortName": "Athletics & Sports",
+                        "icon": {
+                            "prefix": "https:\/\/ss3.4sqi.net\/img\/categories_v2\/shops\/sports_outdoors_",
+                            "suffix": ".png"
+                        },
+                        "primary": true
+                    }],
+                    "verified": false,
+                    "stats": {
+                        "tipCount": 0,
+                        "usersCount": 2,
+                        "checkinsCount": 3
+                    },
+                    "beenHere": {
+                        "count": 0,
+                        "marked": false,
+                        "lastCheckinExpiredAt": 0
+                    },
+                    "photos": {
+                        "count": 0,
+                        "groups": []
+                    },
+                    "hereNow": {
+                        "count": 0,
+                        "summary": "Nobody here",
+                        "groups": []
+                    }
+                },
+                "referralId": "e-8-508d11a9e4b019412cf74222-4"
+            }, {
+                "reasons": {
+                    "count": 0,
+                    "items": [{
+                        "summary": "This spot is popular",
+                        "type": "general",
+                        "reasonName": "globalInteractionReason"
+                    }]
+                },
+                "venue": {
+                    "id": "501e01c1e4b03fc922e09f0e",
+                    "name": "马陵山",
+                    "contact": {},
+                    "location": {
+                        "lat": 34.19422178574916,
+                        "lng": 118.34007374370775,
+                        "labeledLatLngs": [{
+                            "label": "display",
+                            "lat": 34.19422178574916,
+                            "lng": 118.34007374370775
+                        }],
+                        "distance": 17556,
+                        "cc": "CN",
+                        "country": "China",
+                        "formattedAddress": ["China"]
+                    },
+                    "categories": [{
+                        "id": "4eb1d4d54b900d56c88a45fc",
+                        "name": "Mountain",
+                        "pluralName": "Mountains",
+                        "shortName": "Mountain",
+                        "icon": {
+                            "prefix": "https:\/\/ss3.4sqi.net\/img\/categories_v2\/parks_outdoors\/mountain_",
+                            "suffix": ".png"
+                        },
+                        "primary": true
+                    }],
+                    "verified": false,
+                    "stats": {
+                        "tipCount": 0,
+                        "usersCount": 3,
+                        "checkinsCount": 4
+                    },
+                    "beenHere": {
+                        "count": 0,
+                        "marked": false,
+                        "lastCheckinExpiredAt": 0
+                    },
+                    "photos": {
+                        "count": 0,
+                        "groups": []
+                    },
+                    "hereNow": {
+                        "count": 0,
+                        "summary": "Nobody here",
+                        "groups": []
+                    }
+                },
+                "referralId": "e-8-501e01c1e4b03fc922e09f0e-5"
+            }, {
+                "reasons": {
+                    "count": 0,
+                    "items": [{
+                        "summary": "This spot is popular",
+                        "type": "general",
+                        "reasonName": "globalInteractionReason"
+                    }]
+                },
+                "venue": {
+                    "id": "59f3e2dc67e5f265c275b686",
+                    "name": "Suqian International Inline Skating Open",
+                    "contact": {},
+                    "location": {
+                        "lat": 33.96984,
+                        "lng": 118.25714,
+                        "labeledLatLngs": [{
+                            "label": "display",
+                            "lat": 33.96984,
+                            "lng": 118.25714
+                        }],
+                        "distance": 19988,
+                        "cc": "CN",
+                        "city": "Suqian",
+                        "state": "Jiangsu Sheng",
+                        "country": "China",
+                        "formattedAddress": ["Suqian", "Jiangsu Sheng", "China"]
+                    },
+                    "categories": [{
+                        "id": "4bf58dd8d48988d168941735",
+                        "name": "Skating Rink",
+                        "pluralName": "Skating Rinks",
+                        "shortName": "Skating Rink",
+                        "icon": {
+                            "prefix": "https:\/\/ss3.4sqi.net\/img\/categories_v2\/parks_outdoors\/skatingrink_",
+                            "suffix": ".png"
+                        },
+                        "primary": true
+                    }],
+                    "verified": false,
+                    "stats": {
+                        "tipCount": 0,
+                        "usersCount": 1,
+                        "checkinsCount": 1
+                    },
+                    "allowMenuUrlEdit": true,
+                    "beenHere": {
+                        "count": 0,
+                        "marked": false,
+                        "lastCheckinExpiredAt": 0
+                    },
+                    "photos": {
+                        "count": 0,
+                        "groups": []
+                    },
+                    "hereNow": {
+                        "count": 0,
+                        "summary": "Nobody here",
+                        "groups": []
+                    }
+                },
+                "referralId": "e-8-59f3e2dc67e5f265c275b686-6"
+            }]
+        }]
+    }
+}
