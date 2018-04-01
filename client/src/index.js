@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import SearchBar from './components/search_bar'
 import ItineraryList from './components/itinerary_list'
-import myCarousel from './components/myCarousel';
+import MyCarousel from './components/MyCarousel';
 
 
 var foursquare = require('react-foursquare')({
@@ -30,10 +30,11 @@ class App extends Component {
     componentDidMount() {    
         foursquare.venues.explore(params)
           .then(res=> {
-              console.log("hello?");
-              console.log(res);
+              console.log("index.js hello?");
+            //   console.log(res);
             this.setState({ items: res.response.groups[0].items });
             console.log(this.state.items);
+            console.log ("done with index.js");
           });
       }
     
@@ -45,11 +46,10 @@ class App extends Component {
 
                 <div>
                     <div>Items:</div>
-
-                    {/* { this.state.items.map(item=> { return <div key={item.referralId}>{item.venue.name}</div>}) } */}
                 </div>
+                
+                 <MyCarousel items={this.state.items}/>
 
-                <myCarousel items={this.state.items}/>
             </div>
         );
     }
