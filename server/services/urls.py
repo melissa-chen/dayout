@@ -20,8 +20,12 @@ from rest_framework.urlpatterns import format_suffix_patterns
 from services import views
 
 urlpatterns = [
-    re_path(r'^trip_items/$', views.trip_item_list),
-    re_path(r'^trip_items/(?P<pk>[0-9]+)/$', views.trip_item_detail),
+    re_path(r'^trip/$', views.TripList.as_view()),
+    re_path(r'^trip/(?P<pk>[0-9]+)/$', views.TripDetail.as_view()),
+    re_path(r'^trip_items/$', views.TripItemList.as_view()),
+    re_path(r'^trip_items/(?P<pk>[0-9]+)/$', views.TripItemDetail.as_view()),
+    re_path(r'^users/$', views.UserList.as_view()),
+    re_path(r'^users/(?P<pk>[0-9]+)/$', views.UserDetail.as_view()),
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)

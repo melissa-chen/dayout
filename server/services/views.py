@@ -1,49 +1,33 @@
-from rest_framework import status
-from rest_framework.decorators import api_view
-from rest_framework.response import Response
+from django.contrib.auth.models import User
 
-from services.models import TripItem
-from services.serializers import TripItemSerializer
+from rest_framework import generics
 
-@api_view(['GET', 'POST'])
-def trip_item_list(request, format=None):
-    """
-    List all TripItems, or create a new TripItem.
-    """
-    if request.method == 'GET':
-        trip_item_all = TripItem.objects.all()
-        serializer = TripItemSerializer(trip_item_all, many=True)
-        return Response(serializer.data)
+from services.models import Trip, TripItem
+from services.serializers import TripSerializer, TripItemSerializer, UserSerializer
 
-    elif request.method == 'POST':
-        serializer = TripItemSerializer(data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data, status=status.HTTP_201_CREATED)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+class TripList(generics.ListCreateAPIView):
+    queryset = Trip.objects.all()
+    serializer_class = TripSerializer
 
-@api_view(['GET', 'PUT', 'DELETE'])
-def trip_item_detail(request, pk, format=None):
-    """
-    Retrieve, update or delete a TripItem.
-    """
-    try:
-        trip_item = TripItem.objects.get(pk=pk)
-    except TripItem.DoesNotExist:
-        return Response(status=status.HTTP_404_NOT_FOUND)
+    def perform_create(self, serializer):
+        serializer.save(owner=self.request.user)
 
-    if request.method == 'GET':
-        serializer = TripItemSerializer(trip_item)
-        return Response(serializer.data)
+class TripDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Trip.objects.all()
+    serializer_class = TripSerializer
 
-    elif request.method == 'PUT':
-        serializer = TripItemSerializer(trip_item, data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+class TripItemList(generics.ListCreateAPIView):
+    queryset = TripItem.objects.all()
+    serializer_class = TripItemSerializer
 
-    elif request.method == 'DELETE':
-        trip_item.delete()
-        return Response(status=status.HTTP_204_NO_CONTENT)
+class TripItemDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = TripItem.objects.all()
+    serializer_class = TripItemSerializer
 
+class UserList(generics.ListAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+
+class UserDetail(generics.RetrieveAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
