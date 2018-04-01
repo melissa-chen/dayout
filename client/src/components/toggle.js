@@ -14,6 +14,13 @@ class Toggle extends Component {
       isToggleOn: !prevState.isToggleOn
     }));
     addMarker();
+    var markers = [
+      {lat: 34.037186, lng: -118.440717},
+      {lat: 34.065662, lng: -118.443806},
+      {lat: 34.065362, lng: -118.446806},
+      {lat: 34.055662, lng: -118.463806}
+    ];
+    displayPOI(markers);
   }
 
   render() {

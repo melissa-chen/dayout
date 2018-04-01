@@ -5,6 +5,10 @@ import ItineraryList from './components/itinerary_list'
 import myCarousel from './components/myCarousel';
 import Toggle from './components/toggle'
 import Map from './components/map'
+// import ItineraryList from './components/itinerary_list'
+// import MyCarousel from './components/MyCarousel';
+import PoisList from './components/pois_list'
+import PoiDetail from './components/poi_detail'
 
 
 var foursquare = require('react-foursquare')({
@@ -12,10 +16,10 @@ var foursquare = require('react-foursquare')({
     clientSecret: 'C3CF0GOBEKST0QDEMU2M5MOTM0PV3YDE5GBQZVZOWRXLF11Y'  
   });
 
-  var params = {
-    "ll": "37.7749,-122.4194",
-    "query": 'Blue Bottle'
-  };
+var params = {
+  "ll": "37.7749,-122.4194",
+  "query": 'Blue Bottle'
+};
 
 
 
@@ -25,17 +29,21 @@ class App extends Component {
         super(props);
         this.state = { 
             itinerary: [],
-            items: []
+            pois: [],
+            selectedPoi: null
          };
       
     }
-    componentDidMount() {    
+    componentDidMount() {   
+        console.log(foursquare) 
         foursquare.venues.explore(params)
           .then(res=> {
-              console.log("hello?");
-              console.log(res);
-            this.setState({ items: res.response.groups[0].items });
-            console.log(this.state.items);
+              console.log("index.js hello?");
+            //   console.log(res);
+            this.setState({ pois: res.response.groups[0].items });
+            console.log(this.state.pois);
+            this.setState( { selectedPoi: this.state.pois[0] })
+            console.log ("done with index.js");
           });
       }
     
@@ -46,15 +54,20 @@ class App extends Component {
                 <SearchBar />
                 <Toggle />
                 <Map />
-
+                < PoiDetail poi={this.state.selectedPoi}/>
                 <div>
                     <div>Items:</div>
-
-                    {/* { this.state.items.map(item=> { return <div key={item.referralId}>{item.venue.name}</div>}) } */}
                 </div>
 
-                <myCarousel items={this.state.items}/>
+                 {/* <MyCarousel items={this.state.items}/> */}
+                < PoisList 
+                    pois = {this.state.pois }
+                    onPoiSelect = {selectedPoi => this.setState({selectedPoi})} 
+                /> 
+
             </div>
+
+            
         );
     }
 }

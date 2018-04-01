@@ -73,6 +73,15 @@ function addMarker() {
   resizeMap();
 }
 
+function displayPOI(points){
+  points.forEach(function(element) {
+    var marker1 = new google.maps.Marker({
+      position: element,
+      map: map
+    });
+  });
+}
+
 // Instantiate the Bootstrap carousel
 $('.multi-item-carousel').carousel({
   interval: false

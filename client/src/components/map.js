@@ -4,7 +4,6 @@ class Map extends Component {
     constructor(props) {
         super(props);
         this.state = { term: '' };
-        console.log("map")
     }
 
 
