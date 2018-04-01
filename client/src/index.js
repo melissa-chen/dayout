@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import SearchBar from './components/search_bar'
 import ItineraryList from './components/itinerary_list'
-import myCarousel from './components/carousel';
+import myCarousel from './components/myCarousel';
 
 
 var foursquare = require('react-foursquare')({
