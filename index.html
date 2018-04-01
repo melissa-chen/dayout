@@ -5,10 +5,12 @@
     <meta charset="utf-8">
     <title>Simple Polylines</title>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link rel = "stylesheet" type="text/css" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel = "stylesheet" href="style.css" />
 
   </head>
 
@@ -26,67 +28,51 @@
         </div>
       </div>
 
-      <div id="selections">
-        <ul class="list-inline">
-          <li class="list-inline-item"><img src="https://igx.4sqi.net/img/general/300x300/12050444_OjLm8O5AIbsEdBXtJBHTPVzbJ3R2s0mWxKXSY-zl4pc.jpg"></li>
-          <li class="list-inline-item"><img src="https://igx.4sqi.net/img/general/300x300/12050444_OjLm8O5AIbsEdBXtJBHTPVzbJ3R2s0mWxKXSY-zl4pc.jpg"></li>
-          <li class="list-inline-item"><img src="https://igx.4sqi.net/img/general/300x300/12050444_OjLm8O5AIbsEdBXtJBHTPVzbJ3R2s0mWxKXSY-zl4pc.jpg"></li>
-          <li class="list-inline-item"><img src="https://igx.4sqi.net/img/general/300x300/12050444_OjLm8O5AIbsEdBXtJBHTPVzbJ3R2s0mWxKXSY-zl4pc.jpg"></li>
-          <li class="list-inline-item"><img src="https://igx.4sqi.net/img/general/300x300/12050444_OjLm8O5AIbsEdBXtJBHTPVzbJ3R2s0mWxKXSY-zl4pc.jpg"></li>
-          <li class="list-inline-item"><img src="https://igx.4sqi.net/img/general/300x300/12050444_OjLm8O5AIbsEdBXtJBHTPVzbJ3R2s0mWxKXSY-zl4pc.jpg"></li>
-          <li class="list-inline-item"><img src="https://igx.4sqi.net/img/general/300x300/12050444_OjLm8O5AIbsEdBXtJBHTPVzbJ3R2s0mWxKXSY-zl4pc.jpg"></li>
-        </ul>
+      <div class="selections">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="carousel slide multi-item-carousel" id="theCarousel">
+                <div class="carousel-inner">
+                  <div class="item active">
+                    <div class="col-xs-3"><a href="#1"><img src="http://placehold.it/300/f44336/000000" class="img-responsive"></a></div>
+                  </div>
+                  <div class="item">
+                    <div class="col-xs-3"><a href="#1"><img src="http://placehold.it/300/e91e63/000000" class="img-responsive"></a></div>
+                  </div>
+                  <div class="item">
+                    <div class="col-xs-3"><a href="#1"><img src="http://placehold.it/300/9c27b0/000000" class="img-responsive"></a></div>
+                  </div>
+                  <div class="item">
+                    <div class="col-xs-3"><a href="#1"><img src="http://placehold.it/300/673ab7/000000" class="img-responsive"></a></div>
+                  </div>
+                  <div class="item">
+                    <div class="col-xs-3"><a href="#1"><img src="http://placehold.it/300/4caf50/000000" class="img-responsive"></a></div>
+                  </div>
+                  <div class="item">
+                    <div class="col-xs-3"><a href="#1"><img src="http://placehold.it/300/8bc34a/000000" class="img-responsive"></a></div>
+                  </div>
+                  <!-- add  more items here -->
+                  <!-- Example item start:  -->
+                  
+                  <div class="item">
+                    <div class="col-xs-3"><a href="#1"><img src="http://placehold.it/300/8bc34a/000000" class="img-responsive"></a></div>
+                  </div>
+                  
+                  <!--  Example item end -->
+                </div>
+                <a class="left carousel-control" href="#theCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+                <a class="right carousel-control" href="#theCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
-
-
-    <script>
-
-      function initMap() {
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 3,
-          center: {lat: 0, lng: -180}
-        });
-
-        var markers = [
-          {lat: 34.037686, lng: -118.440517},
-          {lat: 34.061662, lng: -118.443306}
-        ];
-
-        var marker1 = new google.maps.Marker({
-          position: markers[0],
-          map: map,
-          title: 'Hello World!'
-        });
-
-        var marker2 = new google.maps.Marker({
-          position: markers[1],
-          map: map,
-          title: 'Hello World!'
-        });
-
-        var flightPath = new google.maps.Polyline({
-          path: markers,
-          geodesic: true,
-          strokeColor: '#FF0000',
-          strokeOpacity: 1.0,
-          strokeWeight: 2
-        });
-
-
-        var bounds = new google.maps.LatLngBounds();
-        for (var i = 0; i < markers.length; i++) {
-         bounds.extend(markers[i]);
-        }
-
-        map.fitBounds(bounds);
-
-        flightPath.setMap(map);
-      }
-    </script>
+    <script src="script.js"></script>
 
     <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDxsIMHYf7lXS3luf661sUefDuAp7x4XZM&callback=initMap">
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDxsIMHYf7lXS3luf661sUefDuAp7x4XZM&callback=initMap">
     </script>
   </body>
 </html>
