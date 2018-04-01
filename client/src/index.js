@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import SearchBar from './components/search_bar'
 import ItineraryList from './components/itinerary_list'
 import myCarousel from './components/myCarousel';
+import Toggle from './components/toggle'
+import Map from './components/map'
 
 
 var foursquare = require('react-foursquare')({
@@ -42,6 +44,8 @@ class App extends Component {
         return (
             <div> 
                 <SearchBar />
+                <Toggle />
+                <Map />
 
                 <div>
                     <div>Items:</div>
