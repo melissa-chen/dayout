@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import SearchBar from './components/search_bar'
-import ItineraryList from './components/itinerary_list'
-import MyCarousel from './components/MyCarousel';
+// import ItineraryList from './components/itinerary_list'
+// import MyCarousel from './components/MyCarousel';
+import PoisList from './components/pois_list'
+import PoiDetail from './components/poi_detail'
 
 
 var foursquare = require('react-foursquare')({
@@ -23,7 +25,8 @@ class App extends Component {
         super(props);
         this.state = { 
             itinerary: [],
-            items: []
+            pois: [],
+            selectedPoi: null
          };
       
     }
@@ -32,8 +35,9 @@ class App extends Component {
           .then(res=> {
               console.log("index.js hello?");
             //   console.log(res);
-            this.setState({ items: res.response.groups[0].items });
-            console.log(this.state.items);
+            this.setState({ pois: res.response.groups[0].items });
+            console.log(this.state.pois);
+            this.setState( { selectedPoi: this.state.pois[0] })
             console.log ("done with index.js");
           });
       }
@@ -43,14 +47,20 @@ class App extends Component {
         return (
             <div> 
                 <SearchBar />
-
+                < PoiDetail poi={this.state.selectedPoi}/>
                 <div>
                     <div>Items:</div>
                 </div>
-                
-                 <MyCarousel items={this.state.items}/>
+
+                 {/* <MyCarousel items={this.state.items}/> */}
+                < PoisList 
+                    pois = {this.state.pois }
+                    onPoiSelect = {selectedPoi => this.setState({selectedPoi})} 
+                /> 
 
             </div>
+
+            
         );
     }
 }
