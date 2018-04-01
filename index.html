@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Simple Polylines</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel = "stylesheet" type="text/css" href="style.css" />
+
+  </head>
+
+  <body>
+      <div class="row">
+        <div class="col-md-8">
+          <div id="map"></div>
+        </div>
+        <div class="col-md-4">
+          <div id="filter">
+            <h1>Questions</h1>
+            <h2>Food? Sight Seeing? Shops?</h2>
+            <h2>how long do you want to stay</h2>
+          </div>
+        </div>
+      </div>
+
+      <div id="selections">
+        <ul class="list-inline">
+          <li class="list-inline-item"><img src="https://igx.4sqi.net/img/general/300x300/12050444_OjLm8O5AIbsEdBXtJBHTPVzbJ3R2s0mWxKXSY-zl4pc.jpg"></li>
+          <li class="list-inline-item"><img src="https://igx.4sqi.net/img/general/300x300/12050444_OjLm8O5AIbsEdBXtJBHTPVzbJ3R2s0mWxKXSY-zl4pc.jpg"></li>
+          <li class="list-inline-item"><img src="https://igx.4sqi.net/img/general/300x300/12050444_OjLm8O5AIbsEdBXtJBHTPVzbJ3R2s0mWxKXSY-zl4pc.jpg"></li>
+          <li class="list-inline-item"><img src="https://igx.4sqi.net/img/general/300x300/12050444_OjLm8O5AIbsEdBXtJBHTPVzbJ3R2s0mWxKXSY-zl4pc.jpg"></li>
+          <li class="list-inline-item"><img src="https://igx.4sqi.net/img/general/300x300/12050444_OjLm8O5AIbsEdBXtJBHTPVzbJ3R2s0mWxKXSY-zl4pc.jpg"></li>
+          <li class="list-inline-item"><img src="https://igx.4sqi.net/img/general/300x300/12050444_OjLm8O5AIbsEdBXtJBHTPVzbJ3R2s0mWxKXSY-zl4pc.jpg"></li>
+          <li class="list-inline-item"><img src="https://igx.4sqi.net/img/general/300x300/12050444_OjLm8O5AIbsEdBXtJBHTPVzbJ3R2s0mWxKXSY-zl4pc.jpg"></li>
+        </ul>
+      </div>
+
+
+
+    <script>
+
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 3,
+          center: {lat: 0, lng: -180}
+        });
+
+        var markers = [
+          {lat: 34.037686, lng: -118.440517},
+          {lat: 34.061662, lng: -118.443306}
+        ];
+
+        var marker1 = new google.maps.Marker({
+          position: markers[0],
+          map: map,
+          title: 'Hello World!'
+        });
+
+        var marker2 = new google.maps.Marker({
+          position: markers[1],
+          map: map,
+          title: 'Hello World!'
+        });
+
+        var flightPath = new google.maps.Polyline({
+          path: markers,
+          geodesic: true,
+          strokeColor: '#FF0000',
+          strokeOpacity: 1.0,
+          strokeWeight: 2
+        });
+
+
+        var bounds = new google.maps.LatLngBounds();
+        for (var i = 0; i < markers.length; i++) {
+         bounds.extend(markers[i]);
+        }
+
+        map.fitBounds(bounds);
+
+        flightPath.setMap(map);
+      }
+    </script>
+
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDxsIMHYf7lXS3luf661sUefDuAp7x4XZM&callback=initMap">
+    </script>
+  </body>
+</html>
